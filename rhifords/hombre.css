@@ -1,0 +1,304 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del header y disposición en flex */
+header.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #095a73c5;
+    font-family: 'Pacifico', cursive; 
+}
+
+/* Contenedor del logo y el nombre de la marca */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+a img {
+    width: 70px;
+    border-radius: 10px 5px;
+    height: auto;
+    margin-right: 10px;
+}
+.brand-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Menú de navegación */
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 8px 12px;
+}
+
+.nav li a:hover {
+    color: white;
+    background-color: #640f0f;
+    border-radius: 4px;
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Estilos generales para las tarjetas */
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.producto {
+    background-color: aquamarine;
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.producto {
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(233, 23, 23, 0.3);
+    box-sizing: border-box;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    box-shadow: 0 8px 16px rgba(233, 23, 23, 0.5);
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.producto p {
+    font: 1em sans-serif;
+    color: #000;
+}
+
+.producto button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.producto button:hover {
+    background-color: brown;
+}
+
+/* Estilos del footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    font-size: 16px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.newsletter {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.newsletter h3 {
+    margin-bottom: 10px;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.newsletter button {
+    padding: 10px;
+    background-color: #0077cc;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer-links,
+.social-links {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-links ul,
+.social-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li,
+.social-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* Para pantallas grandes (PC y monitores grandes) */
+@media (min-width: 1200px) {
+    .nav {
+        gap: 20px;
+    }
+
+    .contenedor-productos {
+        justify-content: space-evenly;
+    }
+
+    .producto {
+        width: 22%; 
+    }
+}
+
+/* Para pantallas de tablets o pantallas medianas */
+@media (max-width: 992px) {
+    header.menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links,
+    .social-links {
+        margin-right: 0;
+    }
+
+    .newsletter form {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .producto {
+        width: 45%; 
+    }
+}
+
+/* Para pantallas pequeñas (smartphones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .brand-name {
+        font-size: 1rem;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .producto {
+        width: 90%; 
+        margin: 10px 0;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+    }
+}
+
+/* Para dispositivos muy pequeños (teléfonos móviles) */
+@media (max-width: 480px) {
+    .logo {
+        width: 10vw;
+        max-width: 60px;
+    }
+
+    .nav {
+        gap: 8px;
+    }
+
+    .nav li a {
+        padding: 6px 10px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+    .footer-links a,
+    .social-links a {
+        font-size: 12px;
+    }
+
+    .producto {
+        width: 100%; 
+        margin: 10px 0;
+    }
+}
